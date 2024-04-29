@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by 201 21李翊誠</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>指數計算機</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>指數計算機</h2>
+    <input type="number" id="base" placeholder="輸入底數">
+    <input type="number" id="exponent" placeholder="輸入指數">
+    <button onclick="calculate()">計算</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      var base = parseFloat(document.getElementById('base').value);
+      var exponent = parseInt(document.getElementById('exponent').value);
+      
+      if (isNaN(base) || isNaN(exponent)) {
+        document.getElementById('result').innerHTML = '請輸入有效的數字。';
+        return;
+      }
+
+      var result = Math.pow(base, exponent);
+      document.getElementById('result').innerHTML = '計算結果：' + base + ' 的 ' + exponent + ' 次方 = ' + result;
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
